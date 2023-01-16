@@ -11,7 +11,7 @@ console.log('servidor en el puerto 3000')
 
 app.get('/',async(req, res) =>{
 	// res.send("IAW")
-	const [result] = await pool.query(`SELECT * from userdb.users`)
+	const [result] = await pool.query(`SELECT * from users`)
 	res.json(result)
 })
 app.get('/ping',async(req, res) =>{
