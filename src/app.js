@@ -19,7 +19,7 @@ app.get('/ping',async(req, res) =>{
 	console.log(result[0])
 })
 app.get('/create',async(req, res) =>{
-	const insertar = await pool.query(`INSERT into users (id, name) VALUES (' ', 'pablo')`)
+	const insertar = await pool.query(`INSERT into users (name) VALUES ('pablo')`)
 	console.log(insertar[0])
 })
 
